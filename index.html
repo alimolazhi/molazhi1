@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کیف‌یار | مدیریت مالی شخصی</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">داشبورد مالی شخصی</p>
+          <h1>کیف‌یار؛ کنترل دخل‌وخرج بدون پیچیدگی</h1>
+          <p class="subtitle">بودجه‌ها، تراکنش‌ها و اهداف پس‌انداز خود را در یک نمای ساده و راست‌به‌چپ دنبال کنید.</p>
+        </div>
+        <div class="hero-card">
+          <span class="icon">💳</span>
+          <span>مانده فعلی</span>
+          <strong id="balance">۰ تومان</strong>
+        </div>
+      </section>
+
+      <section class="cards">
+        <article class="stat income"><span class="icon">↗</span><span>درآمد</span><strong id="income">۰ تومان</strong></article>
+        <article class="stat expense"><span class="icon">↘</span><span>هزینه</span><strong id="expense">۰ تومان</strong></article>
+        <article class="stat save"><span class="icon">🐷</span><span>نرخ پس‌انداز</span><strong id="saving-rate">۰٪</strong></article>
+      </section>
+
+      <div class="grid">
+        <section class="panel">
+          <div class="panel-title"><span>➕</span><h2>ثبت تراکنش جدید</h2></div>
+          <form id="transaction-form" class="form">
+            <label>عنوان<input id="title" placeholder="مثلاً خرید کتاب" required /></label>
+            <label>مبلغ (تومان)<input id="amount" inputmode="numeric" placeholder="مثلاً 450000" required /></label>
+            <label>نوع<select id="type"><option value="expense">هزینه</option><option value="income">درآمد</option></select></label>
+            <label>دسته<select id="category"></select></label>
+            <button>افزودن تراکنش</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title"><span>🎯</span><h2>بودجه‌های ماهانه</h2></div>
+          <div id="budgets" class="budgets"></div>
+        </section>
+      </div>
+
+      <section class="panel transactions">
+        <div class="panel-title"><span>📅</span><h2>آخرین تراکنش‌ها</h2></div>
+        <div id="transactions"></div>
+      </section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

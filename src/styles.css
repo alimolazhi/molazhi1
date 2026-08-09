@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap');
+
+:root { font-family: 'Vazirmatn', system-ui, sans-serif; color: #10201a; background: #eef7f1; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at top left, #c5f5df, transparent 32%), linear-gradient(135deg, #f7fbf8, #e7f3ec); }
+button, input, select { font: inherit; }
+.shell { width: min(1120px, 92vw); margin: auto; padding: 40px 0; }
+.hero { display: grid; grid-template-columns: 1fr 320px; gap: 24px; align-items: stretch; }
+.eyebrow { color: #10845b; font-weight: 800; margin: 0 0 10px; }
+.hero h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.15; margin: 0; color: #08251b; }
+.subtitle { font-size: 1.15rem; color: #52665d; max-width: 680px; }
+.hero-card, .panel, .stat { background: rgba(255, 255, 255, .82); border: 1px solid rgba(16, 132, 91, .14); box-shadow: 0 24px 70px rgba(30, 86, 61, .12); backdrop-filter: blur(14px); border-radius: 28px; }
+.hero-card { display: flex; flex-direction: column; justify-content: center; padding: 30px; background: linear-gradient(145deg, #0f7d58, #20b77b); color: white; }
+.hero-card span { opacity: .82; margin-top: 20px; }
+.hero-card strong { font-size: 1.7rem; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 24px 0; }
+.stat { padding: 24px; display: grid; gap: 10px; }
+.stat .icon { color: #10845b; font-size: 1.6rem; }
+.stat span { color: #64766e; }
+.stat strong { font-size: 1.35rem; }
+.expense .icon, .transaction .expense { color: #d54545; }
+.income .icon, .transaction .income { color: #10845b; }
+.save .icon { color: #b7791f; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.panel { padding: 24px; }
+.panel-title { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+.panel-title h2 { margin: 0; font-size: 1.25rem; }
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form label { display: grid; gap: 6px; color: #40544b; font-weight: 600; }
+.form input, .form select { border: 1px solid #d7e7df; border-radius: 16px; padding: 13px; background: #fbfffd; color: #10201a; }
+.form button { grid-column: 1 / -1; border: 0; border-radius: 16px; padding: 14px; background: #10845b; color: white; font-weight: 800; cursor: pointer; box-shadow: 0 12px 24px rgba(16, 132, 91, .24); }
+.budgets { display: grid; gap: 18px; }
+.budget { display: grid; gap: 10px; }
+.budget > div:first-child { display: flex; justify-content: space-between; gap: 12px; }
+.budget span { color: #64766e; font-size: .9rem; }
+.bar { height: 12px; background: #e4eee9; border-radius: 999px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: linear-gradient(90deg, #20b77b, #0f7d58); border-radius: inherit; }
+.transactions { margin-top: 20px; }
+.transaction { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid #e1ece6; }
+.transaction div { display: grid; gap: 4px; }
+.transaction span { color: #64766e; font-size: .92rem; }
+@media (max-width: 760px) { .hero, .grid, .cards { grid-template-columns: 1fr; } .form { grid-template-columns: 1fr; } .shell { padding: 24px 0; } .budget > div:first-child, .transaction { align-items: flex-start; flex-direction: column; } }
