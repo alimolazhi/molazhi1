@@ -1,1 +1,1 @@
-{"type":"module","scripts":{"test":"node --test","start":"python3 -m http.server 4173"},"dependencies":{},"devDependencies":{}}
+{"type":"module","scripts":{"start":"python3 -m http.server 4173","check":"node --check src/main.js && node --check src/data.js && node --check src/store.js && node --check src/ai.js && node --check service-worker.js"},"dependencies":{},"devDependencies":{}}
